@@ -1,0 +1,42 @@
+[
+  {
+    "cardsData": [
+      {
+        "title": "Marketing Strategy",
+        "caption": "Suscipit feugiat purus ac nunc amet. Id pulvinar arcu nibh orci non rhoncus lobortis1",
+        "icon": "public/images/Card Icons/Icon.png",
+        "id": 1
+      },
+      {
+        "title": "Financial Management",
+        "caption": "Suscipit feugiat purus ac nunc amet. Id pulvinar arcu nibh orci non rhoncus lobortis2",
+        "icon": "public/images/Card Icons/Icon2.png",
+        "id": 2
+      },
+      {
+        "title": "Business Strategy",
+        "caption": "Suscipit feugiat purus ac nunc amet. Id pulvinar arcu nibh orci non rhoncus lobortis3",
+        "icon": "public/images/Card Icons/marble 2.png",
+        "id": 3
+      },
+      {
+        "title": "Sales and Marketing",
+        "caption": "Suscipit feugiat purus ac nunc amet. Id pulvinar arcu nibh orci non rhoncus lobortis4",
+        "icon": "public/images/Card Icons/abstract(3) 2.png",
+        "id": 4
+      },
+      {
+        "title": "Digital Technology",
+        "caption": "Suscipit feugiat purus ac nunc amet. Id pulvinar arcu nibh orci non rhoncus lobortis5",
+        "icon": "public/images/Card Icons/abstract-shape(1).png",
+        "id": 5
+      },
+      {
+        "title": "Human Resources",
+        "caption": "Suscipit feugiat purus ac nunc amet. Id pulvinar arcu nibh orci non rhoncus lobortis6",
+        "icon": "public/images/Card Icons/abstract(1).png",
+        "id": 6
+      }
+    ]
+  }
+]

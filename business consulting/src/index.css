@@ -1,0 +1,11 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base{}
+@layer utilities{}
+@layer components{
+    .active{
+        @apply underline underline-offset-8 decoration-accent
+    }
+}
