@@ -1,6 +1,7 @@
 // components
 import Hero from "./Hero/Hero";
 import HomeData from "./HomeData/HomeData";
+import RightAdvice from "./RightAdvice/RightAdvice";
 import ServicesOffer from "./ServicesOffer/ServicesOffer";
 
 const Home = () => {
@@ -9,6 +10,7 @@ const Home = () => {
             <Hero />
             <HomeData />
             <ServicesOffer />
+            <RightAdvice />
         </div>
     );
 }
