@@ -8,6 +8,7 @@ const {
 } = graphql;
 
 const cardsData = require("../Data/services.json");
+const ecoSection = require("../Data/services.json");
 const CardsDataType = require("./TypeDefs/UserType");
 
 const RootQuery = new GraphQLObjectType({
@@ -20,6 +21,13 @@ const RootQuery = new GraphQLObjectType({
         return cardsData;
       },
     },
+    getEcoSection: {
+      type: new GraphQLList(CardsDataType),
+      args:  { id: { type: GraphQLInt } },
+      resolve(parent , args) {
+        return ecoSection
+      }
+    }
   },
 });
 

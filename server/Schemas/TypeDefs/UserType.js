@@ -11,10 +11,19 @@ const CardsDataLabelsType = new GraphQLObjectType({
   }),
 });
 
+const EcoSectionDataType = new GraphQLObjectType({
+  name: "ImageDataItem",
+  fields: () => ({
+    id: { type: GraphQLInt },
+    img: { type: GraphQLString }
+  })
+})
+
 const CardsDataType = new GraphQLObjectType({
   name: "CardsData",
   fields: () => ({
     cardsData: { type: new GraphQLList(CardsDataLabelsType) },
+    ecoSection: { type: new GraphQLList(EcoSectionDataType) }
   }),
 });
 

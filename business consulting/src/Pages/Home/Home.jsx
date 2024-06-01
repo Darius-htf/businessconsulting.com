@@ -1,4 +1,5 @@
 // components
+import EconomySectors from "./EconomySectors/EconomySectors";
 import Hero from "./Hero/Hero";
 import HomeData from "./HomeData/HomeData";
 import RightAdvice from "./RightAdvice/RightAdvice";
@@ -11,6 +12,7 @@ const Home = () => {
             <HomeData />
             <ServicesOffer />
             <RightAdvice />
+            <EconomySectors />
         </div>
     );
 }
