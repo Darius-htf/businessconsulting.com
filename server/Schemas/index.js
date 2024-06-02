@@ -7,6 +7,28 @@ const {
   GraphQLList,
 } = graphql;
 
+// News API:
+let newsData = null;
+const APIKey = "pub_45469feb2109afa8d167f127dfda431a22fea";
+const getTheNewsData = async () => {
+  try {
+    const response = await fetch(
+      `https://newsdata.io/api/1/latest?apikey=${APIKey}&language=en`
+    );
+
+    if (!response.ok) {
+      throw new Error(`Error fetching data: ${response.status}`);
+    }
+
+    const data = await response.json();
+    newsData = data.results;
+    console.log(newsData);
+  } catch (error) {
+    console.error("Error fetching data:", error);
+  }
+};
+getTheNewsData();
+
 const cardsData = require("../Data/services.json");
 const ecoSection = require("../Data/services.json");
 const CardsDataType = require("./TypeDefs/UserType");
@@ -23,11 +45,18 @@ const RootQuery = new GraphQLObjectType({
     },
     getEcoSection: {
       type: new GraphQLList(CardsDataType),
-      args:  { id: { type: GraphQLInt } },
-      resolve(parent , args) {
-        return ecoSection
-      }
-    }
+      args: { id: { type: GraphQLInt } },
+      resolve(parent, args) {
+        return ecoSection;
+      },
+    },
+    getNewsResults: {
+      type: new GraphQLList(CardsDataType),
+      args: { id: { type: GraphQLInt } },
+      resolve(parent, args) {
+        return newsData;
+      },
+    },
   },
 });
 
@@ -56,4 +85,4 @@ const RootQuery = new GraphQLObjectType({
 //   },
 // });
 
-module.exports = new GraphQLSchema({query: RootQuery});
+module.exports = new GraphQLSchema({ query: RootQuery });

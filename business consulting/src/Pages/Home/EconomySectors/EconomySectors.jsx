@@ -17,7 +17,7 @@ const EconomySectors = () => {
     ){
         setEcoSectionImages(ecoImages.getEcoSection[0].ecoSection)
     }
-  } , [ecoSectionImages])
+  } , [ecoImages])
 
   return (
     <div className="EconomySectors flex w-screen items-center justify-center bg-primary py-20 text-second">
@@ -48,7 +48,7 @@ const EconomySectors = () => {
         </div>
         <div className="eco_imageSection grid grid-rows-1 md:grid-rows-2 lg:grid-cols-4 place-self-center md:grid-cols-3 grid-cols-2 gap-3 mt-16">
             {ecoSectionImages && ecoSectionImages.map(ecoImage => (
-                <img src={ecoImage.img} alt="eco_image"/>
+                <img src={ecoImage.img} key={ecoImage.id} alt="eco_image"/>
             ))}
         </div>
       </div>

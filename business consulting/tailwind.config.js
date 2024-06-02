@@ -45,6 +45,9 @@ export default {
       backgroundImage: {
         "hero-group": "url('images/Groups/Group.png')",
       },
+      scale: {
+        '-100': '-1'
+      }
     },
   },
   plugins: [],
