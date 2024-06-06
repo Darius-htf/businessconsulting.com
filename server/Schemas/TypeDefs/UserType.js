@@ -36,8 +36,8 @@ const CardsDataType = new GraphQLObjectType({
   fields: () => ({
     cardsData: { type: new GraphQLList(CardsDataLabelsType) },
     ecoSection: { type: new GraphQLList(EcoSectionDataType) },
-    results: { type: new GraphQLList(NewsResults) }
+    newResults: { type: new GraphQLList(NewsResults) }
   }),
 });
 
-module.exports = CardsDataType;
+module.exports = {CardsDataType , NewsResults};

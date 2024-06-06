@@ -7,31 +7,12 @@ const {
   GraphQLList,
 } = graphql;
 
-// News API:
-let newsData = null;
-const APIKey = "pub_45469feb2109afa8d167f127dfda431a22fea";
-const getTheNewsData = async () => {
-  try {
-    const response = await fetch(
-      `https://newsdata.io/api/1/latest?apikey=${APIKey}&language=en`
-    );
-
-    if (!response.ok) {
-      throw new Error(`Error fetching data: ${response.status}`);
-    }
-
-    const data = await response.json();
-    newsData = data.results;
-    console.log(newsData);
-  } catch (error) {
-    console.error("Error fetching data:", error);
-  }
-};
-getTheNewsData();
-
+// Data
 const cardsData = require("../Data/services.json");
 const ecoSection = require("../Data/services.json");
-const CardsDataType = require("./TypeDefs/UserType");
+
+// Data type
+const {CardsDataType , NewsResults} = require("./TypeDefs/UserType");
 
 const RootQuery = new GraphQLObjectType({
   name: "RootQueryType",
@@ -50,11 +31,26 @@ const RootQuery = new GraphQLObjectType({
         return ecoSection;
       },
     },
-    getNewsResults: {
-      type: new GraphQLList(CardsDataType),
+    getNews: {
+      type: new GraphQLList(NewsResults),
       args: { id: { type: GraphQLInt } },
-      resolve(parent, args) {
-        return newsData;
+      resolve: async (parent, args) => {
+        const APIKey = "pub_45469feb2109afa8d167f127dfda431a22fea";
+        const apiUrl = `https://newsdata.io/api/1/latest?apikey=${APIKey}&language=en&q=business`;
+
+        try {
+          const res = await fetch(apiUrl);
+          const data = await res.json();
+
+          if (!data.results) {
+            throw new alert("No results found");
+          }
+
+          return data.results;
+        } catch (error) {
+          console.error(error);
+          return [];
+        }
       },
     },
   },

@@ -23,3 +23,15 @@ export const LOAD_ECO_IMGS = gql`
     }
   }
 `;
+
+export const GET_NEWS = gql`
+  query {
+    getNews {
+      link
+      title
+      image_url
+      pubDate
+      description
+    }
+  }
+`;
