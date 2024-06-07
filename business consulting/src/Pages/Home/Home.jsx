@@ -3,6 +3,7 @@ import EconomySectors from "./EconomySectors/EconomySectors";
 import Hero from "./Hero/Hero";
 import HomeData from "./HomeData/HomeData";
 import LatestNews from "./LatestNews/LatestNews";
+import Logos from "./Logos/Logos";
 import ProgressiveSolutions from "./ProgressiveSolutions/ProgressiveSolutions";
 import RightAdvice from "./RightAdvice/RightAdvice";
 import ServicesOffer from "./ServicesOffer/ServicesOffer";
@@ -19,6 +20,7 @@ const Home = () => {
             <ProgressiveSolutions />
             <Testimonials />
             <LatestNews />
+            <Logos />
         </div>
     );
 }

@@ -3,7 +3,10 @@ import { useState } from "react";
 
 //logo
 import Logo from "@/images/Logo/Logo.png";
+
+// components
 import Button from "../Components/Button";
+import Footer from "../Components/Footer";
 
 const RootLayput = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -102,6 +105,9 @@ const RootLayput = () => {
       <main>
         <Outlet />
       </main>
+      <footer>
+        <Footer />
+      </footer>
     </div>
   );
 };

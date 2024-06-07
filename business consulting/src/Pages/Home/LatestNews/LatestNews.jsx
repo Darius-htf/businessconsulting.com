@@ -1,7 +1,7 @@
 import { useQuery } from "@apollo/client";
-import { GET_NEWS } from "../../../GraphQL/Queries";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import { GET_NEWS } from "../../../GraphQL/Queries";
 
 // images:
 import plainImage from "@/images/rightAdvice.png";
