@@ -10,8 +10,8 @@ import x from "@/images/Icons/Frame 233.png";
 const Footer = () => {
   return (
     <div className="Footer flex w-screen flex-col items-center">
-      <div className="flex w-full max-w-xl items-start justify-between">
-        <div className="logo_sec flex w-1/4 flex-col items-start justify-center">
+      <div className="flex w-full max-w-7xl items-start justify-between gap-x-24 px-5 py-10">
+        <div className="logo_sec flex w-full max-w-max flex-col items-start justify-center gap-y-3">
           <img src={logo} alt="logo" />
           <p className="line-clamp-3">
             Velit facilisi senectus velit elementum. Consequat vel arcu feugiat
@@ -23,38 +23,38 @@ const Footer = () => {
             at aliquam. Rhoncus et vitae nulla nec. Volutpat enim nisl amet
             porttitor in lectus tincidunt.
           </p>
-          <div className="footer_icons flex flex-col items-start">
+          <div className="footer_icons flex flex-col items-start gap-y-2">
             <span>Subscribe us</span>
-            <div className="icons flex items-center justify-between">
+            <div className="icons flex items-center justify-between gap-x-2">
               <img src={instagram} alt="facebook_icon" />
               <img src={facebook} alt="x_icon" />
               <img src={x} alt="instagram_icon" />
             </div>
           </div>
         </div>
-        <div className="service_sec flex w-1/4 flex-col items-start">
-          <h6 className="font-bold">Services</h6>
-          <ul>
-            <li>Marketing strategy</li>
-            <li>Financial management</li>
-            <li>Business strategy</li>
-            <li>Sales and Marketing</li>
-            <li>Human Resources</li>
+        <div className="service_sec flex w-full max-w-max flex-col items-start gap-y-3">
+          <h6 className="text-lg font-bold">Services</h6>
+          <ul className="space-y-4">
+            <li className="hover:underline">Marketing strategy</li>
+            <li className="hover:underline">Financial management</li>
+            <li className="hover:underline">Business strategy</li>
+            <li className="hover:underline">Sales and Marketing</li>
+            <li className="hover:underline">Human Resources</li>
           </ul>
         </div>
-        <div className="links_sec w-1/4">
-          <h6 className="font-bold">Useful Links</h6>
-          <ul>
-            <li>
+        <div className="links_sec w-full max-w-fit space-y-3">
+          <h6 className="text-lg font-bold">Useful Links</h6>
+          <ul className="space-y-4">
+            <li className="hover:underline">
               <Link to="/">Home</Link>
             </li>
-            <li>
+            <li className="hover:underline">
               <Link to="about">About</Link>
             </li>
-            <li>
+            <li className="hover:underline">
               <Link to="blog">Blog</Link>
             </li>
-            <li>
+            <li className="hover:underline">
               <Link to="contact">Contact</Link>
             </li>
             <li>
@@ -62,17 +62,33 @@ const Footer = () => {
             </li>
           </ul>
         </div>
-        <div className="subscribe">
-          <h6>Subscribe for our newsletter</h6>
+        <div className="subscribe w-full max-w-max space-y-3">
+          <h6 className="text-lg font-bold">Subscribe for our newsletter</h6>
           <span>Consequat vel arcu feugiat dui eu tempor pretium </span>
-          <div className="email-taker">
-            <input type="email" className="h-[40px] placeholder:['Your email...']"/>
+          <div className="email-taker flex w-full gap-x-2 items-center justify-center">
+            <input
+              type="email"
+              className="h-[40px] w-full px-2"
+              placeholder="Your email..."
+            />
             <Button
               buttonValue={"Subscribe"}
               buttonBg={"bg-accent"}
               buttonMaxWidth={"max-w-[112px]"}
               buttonMaxHeight={"max-h-[40px]"}
             />
+          </div>
+          <div className="website_info flex items-start justify-between">
+            <div className="address">
+              <h6 className="text-lg font-bold">Address</h6>
+              <p>8592 Fairground <br /> St. Tallahassee, <br /> FL 32303</p>
+            </div>
+            <div className="other_info">
+              <h6 className="font-bold text-lg">Email</h6>
+              <p>teverett@optonline.net</p>
+              <h6 className="font-bold text-lg">Phone</h6>
+              <p>(863) 267-3634</p>
+            </div>
           </div>
         </div>
       </div>
