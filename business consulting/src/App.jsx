@@ -19,7 +19,7 @@ import RootLayput from "./Pages/RootLayput";
 
 //pages
 import Home from "./Pages/Home/Home";
-import Services from "./Pages/Services";
+import Services from "./Pages/Services/Services";
 import About from "./Pages/About";
 import Contact from "./Pages/Contact";
 

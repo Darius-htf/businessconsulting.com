@@ -36,6 +36,24 @@
         "caption": "Suscipit feugiat purus ac nunc amet. Id pulvinar arcu nibh orci non rhoncus lobortis6",
         "icon": "public/images/Card Icons/abstract(1).png",
         "id": 6
+      },
+      {
+        "title": "Comeercial Analytics",
+        "caption": "Suscipit feugiat purus ac nunc amet. Id pulvinar arcu nibh orci non rhoncus lobortis6",
+        "icon": "public/images/Card Icons/cross.png",
+        "id": 7
+      },
+      {
+        "title": "Technology Insights",
+        "caption": "Suscipit feugiat purus ac nunc amet. Id pulvinar arcu nibh orci non rhoncus lobortis6",
+        "icon": "public/images/Card Icons/rectangles 1.png",
+        "id": 8
+      },
+      {
+        "title": "Program Management",
+        "caption": "Suscipit feugiat purus ac nunc amet. Id pulvinar arcu nibh orci non rhoncus lobortis6",
+        "icon": "public/images/Card Icons/figures.png",
+        "id": 9
       }
     ],
     "ecoSection": [

@@ -47,6 +47,10 @@ export default {
       },
       scale: {
         '-100': '-1'
+      },
+      backgroundImage:{
+        'marble2': "url('./public/images/Groups/marble 2.png')",
+        'group': "url('./public/images/Groups/Group.png')"
       }
     },
   },

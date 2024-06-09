@@ -6,10 +6,9 @@ import { useEffect, useState } from "react";
 // components
 import Button from "../../../Components/Button";
 
-const ServicesOffer = () => {
+const ServicesOfferServicesComp = () => {
   const { data: servicesCardsData, isLoading, error } = useQuery(LOAD_CARDS);
   const [cardsData, setCardsData] = useState();
-  const [cardsPerPage, setCardsPerPage] = useState(3);
 
   useEffect(() => {
     if (
@@ -26,28 +25,8 @@ const ServicesOffer = () => {
     }
   }, [cardsData]);
 
-  useEffect(() => {
-    function handleResize() {
-      if (window.innerWidth < 500) {
-        setCardsPerPage(3);
-      } else if (window.innerWidth < 769) {
-        setCardsPerPage(4);
-      } else {
-        setCardsPerPage(6);
-      }
-    }
-
-    handleResize();
-
-    window.addEventListener("resize", handleResize);
-
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
-  }, []);
-
   return (
-    <div className="ServicesOffer flex h-full w-screen flex-col items-center justify-center bg-primary text-second">
+    <div className="ServicesOffer bg-primary flex h-full w-screen flex-col items-center justify-center text-second">
       <div className="my-20 flex w-full max-w-[1024px] flex-col items-center justify-center px-5">
         <div className="services_text flex flex-col items-center justify-between gap-y-5 leading-tight lg:flex-row lg:items-end lg:gap-x-10">
           <div className="w-full lg:w-1/2">
@@ -67,23 +46,20 @@ const ServicesOffer = () => {
               sed ac urna augue feugiat mi eget. Eget viverra egestas porta
               consectetur commodo ante.
             </p>
-            <Link to="services" className="self-end font-bold underline">
-              All services
-            </Link>
           </div>
         </div>
-        <div className="services_cards my-20 grid w-full grid-cols-1 grid-rows-2 place-items-center gap-10 md:grid-cols-2 lg:grid-cols-3">
+        <div className="services_cards my-20 grid w-full md:grid-cols-2 grid-rows-2 gap-10 grid-cols-1 lg:grid-cols-3 place-items-center">
           {cardsData &&
-            cardsData.slice(0, cardsPerPage).map((cardData) => (
+            cardsData.map((cardData) => (
               <Link
                 key={cardData.id}
                 to={cardData.id.toString()}
-                className="flex h-full max-h-[380px] max-w-[332px] flex-col items-start justify-between gap-y-2 bg-white p-10 first:bg-second first:text-primary"
+                className="first:text-primary flex max-h-[380px] h-full max-w-[332px] flex-col items-start justify-between gap-y-2 bg-white p-10 first:bg-second"
               >
                 <img src={cardData.icon} alt="icon" />
                 <div className="space-y-3">
                   <h3 className="text-2xl">{cardData.title}</h3>
-                  <p className="line-clamp-3 text-clamp-para opacity-70">
+                  <p className="text-clamp-para line-clamp-3 opacity-70">
                     {cardData.caption}
                   </p>
                 </div>
@@ -103,4 +79,4 @@ const ServicesOffer = () => {
   );
 };
 
-export default ServicesOffer;
+export default ServicesOfferServicesComp;
