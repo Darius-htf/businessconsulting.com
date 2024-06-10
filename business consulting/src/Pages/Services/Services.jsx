@@ -1,6 +1,7 @@
 import ServicesHero from "../Services/Hero/ServicesHero";
 import ServicesLogos from "./Logos/ServicesLogos";
 import ServicesOfferServicesComp from "./ServicesOffer(ServicesComp)/ServicesOfferServicesComp";
+import ThrivingBusiness from "./ThrivingBusiness/ThrivingBusiness";
 import WeWorkWithYou from "./WeWorkWithYou/WeWorkWithYou";
 import WhatToKnowMore from "./WhatToKnowMore/WhatToKnowMore";
 
@@ -12,6 +13,7 @@ const Services = () => {
             <ServicesOfferServicesComp />
             <WhatToKnowMore />
             <WeWorkWithYou />
+            <ThrivingBusiness />
         </div>
     );
 }
