@@ -1,5 +1,5 @@
 import { NavLink, Outlet } from "react-router-dom";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 //logo
 import Logo from "@/images/Logo/Logo.png";
@@ -8,13 +8,29 @@ import Logo from "@/images/Logo/Logo.png";
 import Button from "../Components/Button";
 import Footer from "../Components/Footer";
 
+// Scroll top icon
+import scrollTop from "@/images/Icons/transport.svg";
+
 const RootLayput = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [scrollPosition, setScrollPosition] = useState(0);
+
+  useEffect(() => {
+    window.addEventListener("scroll", () => {
+      setScrollPosition(window.scrollY);
+    });
+  }, []);
+
+  const handleToScrollTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
 
   return (
     <div className="RootLayput flex w-full flex-col items-center bg-second px-5 text-white">
       {/* Desktop Header */}
-      <header className="hidden w-full max-w-[1024px] items-center justify-between lg:flex">
+      <header
+        className={`hidden ${scrollPosition > 200 ? "fixed z-10 p-5" : "static"} w-full max-w-[1024px] items-center justify-between bg-second lg:flex`}
+      >
         <img src={Logo} alt="logo" />
         <nav className="flex items-center justify-around gap-x-5 text-lg">
           <NavLink
@@ -53,7 +69,7 @@ const RootLayput = () => {
       </header>
       {/* Mobile Header */}
       <header
-        className={`flex w-full max-w-[1024px] flex-col items-center justify-between ${isOpen ? "gap-y-10" : "gap-none"} lg:hidden`}
+        className={`flex w-full max-w-[1024px] flex-col items-center justify-between ${isOpen ? "gap-y-10" : "gap-none"} ${scrollPosition > 200 ? "fixed z-10 bg-second p-5" : "static"} lg:hidden`}
       >
         <div className="flex w-full items-center justify-between">
           <img className="mt-2" src={Logo} alt="logo" />
@@ -108,6 +124,14 @@ const RootLayput = () => {
       <footer>
         <Footer />
       </footer>
+      {scrollPosition > 100 && (
+        <button
+          className="fixed bottom-0 w-[100px] overflow-hidden md:bottom-2 md:right-0"
+          onClick={handleToScrollTop}
+        >
+          <img className="w-full" src={scrollTop} alt="scroll_top" />
+        </button>
+      )}
     </div>
   );
 };

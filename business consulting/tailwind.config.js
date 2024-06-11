@@ -50,7 +50,8 @@ export default {
       },
       backgroundImage:{
         'marble2': "url('./public/images/Groups/marble 2.png')",
-        'group': "url('./public/images/Groups/Group.png')"
+        'group': "url('./public/images/Groups/Group.png')",
+        'blank2': "url('./public/images/project-card-image.png')"
       }
     },
   },

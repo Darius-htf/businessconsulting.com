@@ -1,13 +1,4 @@
-// video player css
-import "@vidstack/react/player/styles/default/theme.css";
-import "@vidstack/react/player/styles/default/layouts/video.css";
-
-// media player components
-import { MediaPlayer, MediaProvider, Poster, Track } from "@vidstack/react";
-import {
-  defaultLayoutIcons,
-  DefaultVideoLayout,
-} from "@vidstack/react/player/layouts/default";
+import ReactPlayer from "react-player/lazy";
 
 // images
 import blank from "@/images/rightAdvice.png";
@@ -18,28 +9,22 @@ const ThrivingBusiness = () => {
       <div className="w-full max-w-[1024px] px-5 md:text-center">
         <p className="text-clamp-para">BUSINESS CONSULTING</p>
         <h1 className="text-clamp-title font-bold">
-          A business that thrives on the knowledge <br /> and insight of the leaders
+          A business that thrives on the knowledge <br /> and insight of the
+          leaders
         </h1>
-        <MediaPlayer
-          className="my-10"
-          posterLoad="visible"
-          load="play"
-          title="business consulting"
-          src="https://www.youtube.com/watch?v=xIIJfmDnvPE"
-          playsInline
-          aspectRatio="16/9"
-          storage="storage-key"
-          viewType="video"
-          poster={blank}
-          logLevel="warn"
-          crossOrigin
-        >
-          <MediaProvider>
-            <Poster className="vds-poster" />
-          </MediaProvider>
-          <DefaultVideoLayout thumbnails={blank} icons={defaultLayoutIcons} />
-        </MediaPlayer>
-        <div className="text flex md:flex-row flex-col justify-between text-start items-start gap-x-10">
+        <div className="player_wrapper py-10">
+          <ReactPlayer
+            controls={true}
+            url="https://www.youtube.com/watch?v=xIIJfmDnvPE"
+            width="100%"
+            volume={0.5}
+            muted
+            playsinline
+            pip
+            onBuffer={<span>Loading...</span>}
+          />
+        </div>
+        <div className="text flex flex-col items-start justify-between gap-x-10 text-start md:flex-row">
           <p className="line-clamp-4 text-clamp-para">
             Sed lorem ut nulla tortor sit eget felis. Integer malesuada
             curabitur vel interdum leo justo at ultricies. Sit aliquet tempus

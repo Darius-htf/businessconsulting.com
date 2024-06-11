@@ -45,18 +45,18 @@ const LatestNews = () => {
           {newsItem &&
             newsItem.slice(0, cardsPerPage).map((item) => (
               <Link
-                className="flex w-full flex-col items-center justify-between bg-white shadow-lg"
+                className="flex w-full flex-col items-start justify-between bg-white h-full shadow-lg"
                 key={item.id}
                 // to={item.id.toString()}
               >
-                <div className="card_image flex w-full h-[200px] items-center justify-center">
+                <div className="card_image flex w-full object-cover h-[200px] items-center justify-center">
                   <img
-                    className="size-full object-cover"
+                    className="object-cover w-full h-[200px]"
                     src={item.image_url ? item.image_url : plainImage}
                     alt="news_image"
                   />
                 </div>
-                <div className="flex flex-col items-start justify-center gap-y-2 px-2 py-1">
+                <div className="flex flex-col items-start justify-between h-full gap-y-2 px-2 py-1">
                   <span className="text-sm text-gray-500">
                     {item.pubDate} / Business consulting
                   </span>
