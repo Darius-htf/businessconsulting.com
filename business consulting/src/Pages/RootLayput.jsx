@@ -34,24 +34,28 @@ const RootLayput = () => {
         <img src={Logo} alt="logo" />
         <nav className="flex items-center justify-around gap-x-5 text-lg">
           <NavLink
+            onClick={handleToScrollTop}
             className="decoration-accent decoration-4 underline-offset-8 [&_.active]:underline"
             to="/"
           >
             Home
           </NavLink>
           <NavLink
+            onClick={handleToScrollTop}
             className="decoration-accent decoration-4 underline-offset-8 [&_.active]:underline"
             to="services"
           >
             Services
           </NavLink>
           <NavLink
+            onClick={handleToScrollTop}
             className="decoration-accent decoration-4 underline-offset-8 [&_.active]:underline"
             to="about"
           >
             About
           </NavLink>
           <NavLink
+            onClick={handleToScrollTop}
             className="decoration-accent decoration-4 underline-offset-8 [&_.active]:underline"
             to="contact"
           >
@@ -82,28 +86,40 @@ const RootLayput = () => {
         >
           <NavLink
             aria-disabled={isOpen ? false : true}
-            onClick={() => setIsOpen(!isOpen)}
+            onClick={() => {
+              setIsOpen(!isOpen);
+              handleToScrollTop();
+            }}
             to="/"
           >
             Home
           </NavLink>
           <NavLink
             aria-disabled={isOpen ? false : true}
-            onClick={() => setIsOpen(!isOpen)}
+            onClick={() => {
+              setIsOpen(!isOpen);
+              handleToScrollTop();
+            }}
             to="services"
           >
             Services
           </NavLink>
           <NavLink
             aria-disabled={isOpen ? false : true}
-            onClick={() => setIsOpen(!isOpen)}
+            onClick={() => {
+              setIsOpen(!isOpen);
+              handleToScrollTop();
+            }}
             to="about"
           >
             About
           </NavLink>
           <NavLink
             aria-disabled={isOpen ? false : true}
-            onClick={() => setIsOpen(!isOpen)}
+            onClick={() => {
+              setIsOpen(!isOpen);
+              handleToScrollTop();
+            }}
             to="contact"
           >
             Contact
