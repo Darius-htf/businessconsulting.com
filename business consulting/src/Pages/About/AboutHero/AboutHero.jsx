@@ -1,5 +1,6 @@
 // images
 import Frame478 from "@/images/Groups/Frame 478.png";
+import Frame6969 from "@/images/Groups/Frame 6969.png";
 
 // components
 import Button from "../../../Components/Button";
@@ -7,7 +8,9 @@ import Hero from "../../../Components/Hero";
 
 const AboutHero = () => {
   return (
-    <Hero>
+    <Hero
+      bgImage={"abstract3"}
+    >
       <div className="hero_text flex w-full flex-col items-center gap-y-6 text-center leading-tight lg:w-1/2 lg:items-start lg:text-start">
         <Hero.PageTitle>About us</Hero.PageTitle>
         <Hero.Title>
@@ -29,11 +32,18 @@ const AboutHero = () => {
           <Button
             buttonValue={"Learn more"}
             buttonBg={"bg-accent"}
-            buttonMaxWidth={"max-w-[193px]"}
-            buttonMaxHeight={"max-h-[50px]"}
+            buttonMaxWidth={"md:max-w-[193px]"}
+            buttonMaxHeight={"md:max-h-[50px]"}
           />
         </Hero.Button>
       </div>
+      <Hero.HeroImage>
+        <img
+          className="object-cover lg:max-w-max"
+          src={Frame6969}
+          alt="hero_image"
+        />
+      </Hero.HeroImage>
     </Hero>
   );
 };
