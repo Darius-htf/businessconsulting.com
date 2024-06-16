@@ -1,0 +1,5 @@
+{
+  "watch": ["./Data/services.json"],
+  "ext": "json",
+  "exec": "node index.js"
+}
