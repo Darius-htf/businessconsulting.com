@@ -35,3 +35,15 @@ export const GET_NEWS = gql`
     }
   }
 `;
+
+export const GET_EXPERTS = gql`
+  query {
+    getExperts {
+      experts {
+        id
+        picture
+        name
+      }
+    }
+  }
+`;

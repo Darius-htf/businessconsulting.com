@@ -9,7 +9,7 @@ import Hero from "../../../Components/Hero";
 const AboutHero = () => {
   return (
     <Hero
-      bgImage={"abstract3"}
+      bgImage={"lg:bg-abstract3"}
     >
       <div className="hero_text flex w-full flex-col items-center gap-y-6 text-center leading-tight lg:w-1/2 lg:items-start lg:text-start">
         <Hero.PageTitle>About us</Hero.PageTitle>
@@ -39,7 +39,7 @@ const AboutHero = () => {
       </div>
       <Hero.HeroImage>
         <img
-          className="object-cover lg:max-w-max"
+          className="object-cover"
           src={Frame6969}
           alt="hero_image"
         />

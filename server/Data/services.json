@@ -65,6 +65,48 @@
       { "id": 6, "img": "public/images/Img 6.png" },
       { "id": 7, "img": "public/images/Img 7.png" },
       { "id": 8, "img": "public/images/Img 8.png" }
+    ],
+    "experts": [
+      {
+        "id": 1,
+        "name": "Erick Taylor",
+        "picture": "public/images/Erick Taylor.png"
+      },
+      {
+        "id": 2,
+        "name": "Ryder Malone",
+        "picture": "public/images/Ryder Malone.png"
+      },
+      {
+        "id": 3,
+        "name": "Derick Fry",
+        "picture": "public/images/Derick Fry.png"
+      },
+      {
+        "id": 4,
+        "name": "Johnathon Crosby",
+        "picture": "public/images/Johnathon Crosby.png"
+      },
+      {
+        "id": 5,
+        "name": "Valeria Bolton",
+        "picture": "public/images/Valeria Bolton.png"
+      },
+      {
+        "id": 6,
+        "name": "Kara Hawkins",
+        "picture": "public/images/Kara Hawkins.png"
+      },
+      {
+        "id": 7,
+        "name": "Allyson Blair",
+        "picture": "public/images/Allyson Blair.png"
+      },
+      {
+        "id": 8,
+        "name": "Jackson Mahoney",
+        "picture": "public/images/Jackson Mahoney.png"
+      }
     ]
   }
 ]

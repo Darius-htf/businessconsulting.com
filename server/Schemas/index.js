@@ -10,9 +10,10 @@ const {
 // Data
 const cardsData = require("../Data/services.json");
 const ecoSection = require("../Data/services.json");
+const experts = require("../Data/services.json");
 
 // Data type
-const {CardsDataType , NewsResults} = require("./TypeDefs/UserType");
+const { CardsDataType, NewsResults } = require("./TypeDefs/UserType");
 
 const RootQuery = new GraphQLObjectType({
   name: "RootQueryType",
@@ -51,6 +52,13 @@ const RootQuery = new GraphQLObjectType({
           console.error(error);
           return [];
         }
+      },
+    },
+    getExperts: {
+      type: new GraphQLList(CardsDataType),
+      args: { id: { type: GraphQLInt } },
+      resolve(parent, args) {
+        return experts;
       },
     },
   },

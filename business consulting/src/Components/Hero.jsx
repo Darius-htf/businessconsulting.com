@@ -1,7 +1,9 @@
-const Hero = ({ children, bgImage }) => {
+const Hero = ({ children, ...props }) => {
+  const bgImage = props.bgImage;
+
   return (
     <div
-      className={`hero mb-10 mt-10 flex flex-col items-center justify-start bg-right bg-no-repeat lg:mt-20 lg:h-[512px] lg:flex-row lg:bg-${bgImage} xl:px-0`}
+      className={`hero mt-10 flex flex-col items-center justify-start bg-right bg-no-repeat mb-10 lg:mb-0 lg:mt-20 lg:h-[512px] lg:flex-row ${bgImage} xl:px-0 px-5`}
     >
       {children}
     </div>
@@ -24,7 +26,7 @@ const PageTitle = ({ children }) => (
 );
 // const Vector = ({ children }) => <img className="vector" src={children} />;
 const HeroImage = ({ children }) => (
-  <div className="hero_image hidden w-1/2 flex-col items-center justify-center overflow-hidden lg:flex">
+  <div className="hero_image hidden h-full w-1/2 flex-col items-center justify-center overflow-hidden lg:flex">
     {children}
   </div>
 );
