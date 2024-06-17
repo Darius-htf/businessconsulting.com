@@ -36,7 +36,8 @@ const Experts = new GraphQLObjectType({
   fields: () => ({
     id: { type: GraphQLInt },
     name: { type: GraphQLString },
-    picture: { type: GraphQLString }
+    picture: { type: GraphQLString },
+    jobTitle: { type: GraphQLString }
   })
 }) 
 

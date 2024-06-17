@@ -70,42 +70,50 @@
       {
         "id": 1,
         "name": "Erick Taylor",
-        "picture": "public/images/Erick Taylor.png"
+        "picture": "public/images/Erick Taylor.png",
+        "jobTitle": "Chief Factors Coordinator"
       },
       {
         "id": 2,
         "name": "Ryder Malone",
-        "picture": "public/images/Ryder Malone.png"
+        "picture": "public/images/Ryder Malone.png",
+        "jobTitle": "Global Interactions Agent"
       },
       {
         "id": 3,
         "name": "Derick Fry",
-        "picture": "public/images/Derick Fry.png"
+        "picture": "public/images/Derick Fry.png",
+        "jobTitle": "Product Quality Strategist"
       },
       {
         "id": 4,
         "name": "Johnathon Crosby",
-        "picture": "public/images/Johnathon Crosby.png"
+        "picture": "public/images/Johnathon Crosby.png",
+        "jobTitle": "Investor Response Assistant"
       },
       {
         "id": 5,
         "name": "Valeria Bolton",
-        "picture": "public/images/Valeria Bolton.png"
+        "picture": "public/images/Valeria Bolton.png",
+        "jobTitle": "Global Interactions Agent"
       },
       {
         "id": 6,
         "name": "Kara Hawkins",
-        "picture": "public/images/Kara Hawkins.png"
+        "picture": "public/images/Kara Hawkins.png",
+        "jobTitle": "Product Quality Strategist"
       },
       {
         "id": 7,
         "name": "Allyson Blair",
-        "picture": "public/images/Allyson Blair.png"
+        "picture": "public/images/Allyson Blair.png",
+        "jobTitle": "Investor Response Assistant"
       },
       {
         "id": 8,
         "name": "Jackson Mahoney",
-        "picture": "public/images/Jackson Mahoney.png"
+        "picture": "public/images/Jackson Mahoney.png",
+        "jobTitle": "Chief Factors Coordinator"
       }
     ]
   }

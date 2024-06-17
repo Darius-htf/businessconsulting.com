@@ -43,6 +43,7 @@ export const GET_EXPERTS = gql`
         id
         picture
         name
+        jobTitle
       }
     }
   }

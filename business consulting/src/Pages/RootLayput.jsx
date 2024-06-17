@@ -142,7 +142,7 @@ const RootLayput = () => {
       </footer>
       {scrollPosition > 100 && (
         <button
-          className="fixed bottom-0 w-[100px] overflow-hidden md:bottom-2 md:right-0"
+          className="fixed bottom-0 z-10 w-[100px] overflow-hidden md:bottom-2 md:right-0"
           onClick={handleToScrollTop}
         >
           <img className="w-full" src={scrollTop} alt="scroll_top" />
